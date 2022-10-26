@@ -19,7 +19,7 @@ const PostsController = {
         }
         let postsWithInfo = [];
         posts.forEach((post) => {
-          postWithInfo = {
+          let postWithInfo = {
             ...post._doc,
           };
           const isNotLoggedInUsers =
@@ -33,7 +33,7 @@ const PostsController = {
           postWithInfo.displayLike = isNotLoggedInUsers && hasNotBeenLiked;
           postsWithInfo.push(postWithInfo);
         });
-        console.log(postsWithInfo);
+        // console.log(postsWithInfo);
         res.render("posts/index", { posts: postsWithInfo });
       });
   },

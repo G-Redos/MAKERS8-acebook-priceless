@@ -13,7 +13,7 @@
 
                 <div class="col-1">
                   <img
-                    class="author-post-image rounded"
+                    class="author-post-image rounded" style="max-width:72px; max-height:72px"
                     src="{{formatImage
                       this.author.image.contentType
                       this.author.image.data
@@ -29,7 +29,7 @@
 
                     {{#if this.image.data}}
                       <div><img
-                          class="post-image"
+                          class="post-image img-fluid"
                           src="{{formatImage this.image.contentType this.image.data}}"
                         /></div>
                       <br>
@@ -73,7 +73,7 @@
                               <div class="row align-items-start">
                                 <div class="col-1">
                                   <img
-                                  class="author-comment-image"
+                                  class="author-comment-image" style="max-width:72px; max-height:72px"
                                   src="{{formatImage
                                     this.author.image.contentType
                                     this.author.image.data

@@ -30,7 +30,7 @@ const UsersController = {
           isNotOwnProfile: isNotOwnProfile,
         });
       })
-      .catch((err) => {
+      .catch(() => {
         res.render("error", { message: "This user does not exist" });
       });
   },

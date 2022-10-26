@@ -24,7 +24,7 @@ const SettingsController = {
         console.log(err);
       } else {
         User.findById(req.session.user._id).then((user) => {
-          console.log(req.file);
+          // console.log(req.file);
           user.image = {
             data: req.file.buffer,
             contentType: req.file.mimetype,
